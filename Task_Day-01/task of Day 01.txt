@@ -1,0 +1,56 @@
+2. Summarize the methods of 𝐷𝑎𝑡𝑎𝑔𝑟𝑎𝑚𝑆𝑜𝑐𝑘𝑒𝑡 and 𝐷𝑎𝑡𝑎𝑔𝑟𝑎𝑚𝑃𝑎𝑐𝑘𝑒𝑡 classes.
+>> Java DatagramSocket and DatagramPacket classes are used for connection-less socket programming 
+using the UDP instead of TCP.
+
+-Datagram
+Datagrams are collection of information sent from one device to another device via the established network. When the datagram is sent to the targeted device, 
+there is no assurance that it will reach to the target device safely and completely. 
+It may get damaged or lost in between. Likewise, the receiving device also never know if the datagram received is damaged or not. The UDP protocol is used to implement the datagrams in Java.
+
+-Java DatagramSocket class
+Java DatagramSocket class represents a connection-less socket for sending and receiving datagram packets. 
+It is a mechanism used for transmitting datagram packets over network.
+A datagram is basically an information but there is no guarantee of its content, arrival or arrival time.
+
+--Commonly used Constructors of DatagramSocket class
+1- DatagramSocket() throws SocketEeption: it creates a datagram socket and binds it with the available Port Number on the localhost machine.
+2- DatagramSocket(int port) throws SocketEeption: it creates a datagram socket and binds it with the given Port Number.
+3- DatagramSocket(int port, InetAddress address) throws SocketEeption: it creates a datagram socket and binds it with the specified port number and host address.
+
+-Java DatagramPacket Class
+Java DatagramPacket is a message that can be sent or received. 
+It is a data container. If you send multiple packet, it may arrive in any order. 
+Additionally, packet delivery is not guaranteed.
+
+--Commonly used Constructors of DatagramPacket class
+1- DatagramPacket(byte[] barr, int length): it creates a datagram packet. This constructor is used to receive the packets.
+2- DatagramPacket(byte[] barr, int length, InetAddress address, int port): it creates a datagram packet. This constructor is used to send the packets.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. What is 𝑆𝑜𝑐𝑘𝑒𝑡 class.
+>> Normally, a server runs on a specific computer and has a socket that is bound to a specific port number. 
+The server just waits, listening to the socket for a client to make a connection request.
+On the client-side: The client knows the hostname of the machine on which the server is running and the port number on which the server is listening. 
+To make a connection request, the client tries to rendezvous with the server on the server's machine and port. 
+The client also needs to identify itself to the server so it binds to a local port number that it will use during this connection. 
+This is usually assigned by the system.
+
+Definition: A socket is one endpoint of a two-way communication link between two programs running on the network. 
+A socket is bound to a port number so that the TCP layer can identify the application that data is destined to be sent to.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. What is 𝐼𝑛𝑒𝑡𝐴𝑑𝑑𝑟𝑒𝑠𝑠 class is used for?
+
+>> The InetAddress class is used to encapsulate both, the numerical IP address and the domain name for that address. 
+The InetAddress class has no visible constructors. The InetAddress class has the inability to create objects directly, hence factory methods are used for the purpose. Factory Methods are static methods in a class that return an object of that class.
+
+- Methods: 
+1- static InetAddress getLocalHost() throws UnknownHostException: This method returns the instance of InetAddress containing the local hostname and address.
+2- public static InetAddress getByName( String host ) throws UnknownHostException: This method returns the instance of InetAddress containing LocalHost IP and name.	
+3- static InetAddress[] getAllByName( String hostName ) throws UnknownHostException: This method returns the array of the instance of InetAddress class which contains IP addresses.
+4-static InetAddress getByAddress( byte IPAddress[] ) throws UnknownHostException: This method returns an InetAddress object created from the raw IP address.
+5- static InetAddress getByAddress( String hostName, byte IPAddress[] ) throws UnknownHostException: This method creates and returns an InetAddress based on the provided hostname and IP address.
+			
+
