@@ -1,0 +1,82 @@
+
+What are java Generics?
+
+Generics mean parameterized types. The idea is to allow type (Integer, String, … etc, and user-defined types) to be a parameter to methods, classes, and interfaces. Using Generics, it is possible to create classes that work with different data types. 
+An entity such as class, interface, or method that operates on a parameterized type is called a generic entity.
+
+The Object is the superclass of all other classes and Object reference can refer to any type object. These features lack type safety. Generics add that type safety feature. 
+Generics in Java is similar to templates in C++. For example, classes like HashSet, ArrayList, HashMap, etc use generics very well. There are some fundamental differences between the two approaches to generic types. 
+
+
+
+What is Wildcard in Java?
+
+Wildcards in Java are basically the question marks which we use in generic programming, it basically represents the unknown type. We use Java Wildcard  widely in situations such as in a type of parameter, local variable, or field and also as a return type.
+
+Unlike arrays, different instantiations of a generic type are not compatible with each other, not even explicitly. We can remove this incompatibility by using wildcard ‘?’ as an actual type parameter.
+
+Wildcards are nothing but the question mark(?) that you use in the Java Generics. We can use the Java Wildcard as a local variable, parameter, field or as a return type. But, when the generic class is instantiated or when a generic method is called, we can’t use wildcards.
+
+The wildcard is useful to remove the incompatibility between different instantiations of a generic type. This incompatibility is removed by using wildcards ? as an actual type parameter.
+
+There are two types of parameters that we pass to a method in the form of in and out parameters. They are:
+
+1. in variable
+in variable is a variable that provides the actual data to the Java program. For example, there is a method myMethod(source, destination). In this method, the source acts as an in variable to the method.
+
+2. out variable
+out variable is a variable in which the updated data gets stored by the java program. For example, there is a method myMethod(source, destination). In this method, destination acts as an out variable to the method.
+
+Types of Wildcard in Java
+1. Upper Bounded Wildcards
+2. Lower Bounded Wildcards
+3. Unbounded Wildcards
+
+1. Upper Bounded Wildcards
+The Upper Bounded wildcards are the wildcard that relaxes the restriction of the variable type. That is, if we want to relax the restriction on the type of the variable in the method, we can use this type of wildcards.
+
+2. Lower Bounded Wildcards
+We use the Lower Bounded wildcards to widen the use of the type of variable. For example, if we want to add the list of integers in our method we can use the List<Integer>, but using this we will be bound to use only the list of integers.
+
+So here, we can also use the List<Number> and List<Object> to store the list of integers. So we use the Lower Bounded wildcard to achieve this. We can use this by a wildcard character ? and put a super keyword after that followed by the lower bound.
+Example: <? super LowerBound>
+
+3. Unbounded Wildcards
+We use the Unbounded wildcards when we want to specify the type of wildcard with the wildcard character ?.  We generally use this wildcard when the code inside the method is using the Object functionality and also when the code inside the method does not depend upon the parameter type.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+What is the difference between array list and enums?
+
+Array: is a variable that can contain multiple elements with index starting from 0 
+whereas enum is an user defined datatype that contains a list of members for which an integer constant is assigned starting from 0. in case of enum the numbers starting from 0 are not indexes whereas in case of an array they are indexes. Also in case of enum you can assign your own constant values to the members that may or may not start from 0 and may or may not be in a sequence.
+A array is a sequence of memory locations. It is a collection. Each element in that collection is indexed by a number. So using that number you can retrieve the value stored at that location. Much like the page number in a book lets you look up the content of that page, the index on an array lets you look up the value stored at that location.
+
+An Enum is basically a group of named constants. It is an alternative to numbered flag parameters. (It also doesn't have to be numbered from zero, you can specify the numbering.)
+An Enum could be days of the week for example. A Enum could departments in a company: eg SALES, BILLING, HR ...
+
+Example:
+Array's value are assigned by using = operator 'eg. int a[4]={1,2,3,4}' and enum is the user defined data type and it is assigned like enum days{sun,mon,tue,wed,thr,fri,sat}
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+What are unicast and broadcast? 
+What are the differences between unicast, multicast, and broadcast?
+
+Unicast: from one source to one destination i.e. One-to-One, traffic, many streams of IP packets that move across networks flow from a single point, such as a website server, to a single endpoint such as a client PC. This is the most common form of information transference on networks.
+
+Broadcast: from one source to all possible destinations i.e. One-to-All, Here, traffic streams from a single point to all possible endpoints within reach on the network, which is generally a LAN. This is the easiest technique to ensure traffic reaches its destinations.
+This mode is mainly utilized by television networks for video and audio distribution. Even if the television network is a cable television (CATV) system, the source signal reaches all possible destinations, which is the key reason that some channels’ content is scrambled. Broadcasting is not practicable on the public Internet due to the massive amount of unnecessary data that would continually reach each user’s device, the complications and impact of scrambling, and related privacy issues.
+
+Multicast: from one source to multiple destinations stating an interest in receiving the traffic i.e. One-to-Many
+Note: There is no separate classification for Many-to-Many applications, for example, 
+video conferencing or online gaming, where multiple sources for the same receiver and where receivers often are double as sources. This service model works on the basis of one-to-many multicast and for that reason requires no unique protocol. The original multicast design i.e. RFC 1112, supports both the ASM (any-source-multicast) based on a many-to-many service model and the SSM (source-specific multicast) based on a one-to-many model.
+
+mportant note
+Multicast on the Internet is usually not a concrete solution because only small sections of the Internet are enabled with Multicast. On the other hand, incorporate environments where all routers are multicast-enabled can save quite a bit of bandwidth.
+
+
+
+
+
+
