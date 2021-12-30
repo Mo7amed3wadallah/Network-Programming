@@ -1,0 +1,65 @@
+• What is I/O redirection in java? Give a code example.
+>>
+The Java System class allows you to redirect the standard input, output, and error I/O streams using simple static method calls:
+-setIn(InputStream)
+-setOut(PrintStream)
+-setErr(PrintStream)
+
+Redirecting output is especially useful if you suddenly start creating a large amount of output on your screen, and it’s scrolling past faster than you can read it.
+Redirecting input is valuable for a command-line program in which you want to test a particular user-input sequence repeatedly. 
+
+Example in file>> Redirection.java.
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+• What is Serialization in java? Give a code example.
+>>
+Serialization is the process of serializing the state of an object to be represented and stored in the form of a sequence of bytes.
+This can be stored in a file. 
+The process to read the state of the object from the file and restoring it is called deserialization.
+
+Example in file>> Serialization.java.
+
+_______________________________________________________________________________________________________________________________________
+
+• Compare between serial access and random-access files in terms of their 
+>>
+-- serial access files: Serial files are stored in chronological order, that is as each record is received it is stored in the next available storage position.
+
+Advantages:
+• Simple to handle
+• The space on the storage medium can be utilized to the maximum possible extent.
+• Widely used in small-scale applications
+
+Disadvantages:
+• We can't go directly to a specific record.
+• It is not possible to add or modify records within an existing file.
+
+--  random-access files: is a term used to describe a file or set of files that are accessed directly instead of requiring that other files be read first. 
+Computer hard drives access files directly, where tape drives commonly access files sequentially
+
+Advantages:
+• Immediate access to record is possible.
+• Up-to-date information will always be available on the file.
+• Addition & deletion of record is not very complex.
+
+Disadvantages:
+• Records in a particular file must be of the Same length.
+• Given string field must be of the same length for all records on the file.
+• Numeric data is not in human-readable form
+
+_____________________________________________________________________________________________________________________________________________
+
+• What is 𝐽𝐹𝑖𝑙𝑒𝐶ℎ𝑜𝑜𝑠𝑒𝑟 in java? Give a code example.
+>>
+JFileChooser is a part of java Swing package. The java Swing package is part of JavaTM Foundation Classes(JFC) . 
+JFC contains many features that help in building graphical user interface in java .
+ Java Swing provides components such as buttons, panels, dialogs, etc . JFileChooser is a easy and an effective way to prompt the user to choose a file or a directory . 
+
+1. JFileChooser() – empty constructor that points to user’s default directory
+2. JFileChooser(String) – uses the given path 
+3. JFileChooser(File) – uses the given File as the path 
+4. JFileChooser(FileSystemView) – uses the given FileSystemView 
+5. JFileChooser(String, FileSystemView) – uses the given path and the FileSystemView
+6. JFileChooser(File, FileSystemView) – uses the given current directory and the FileSystemView 
+
+Example in file>> FileChooser.java
